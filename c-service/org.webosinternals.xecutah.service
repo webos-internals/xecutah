@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.webosinternals.xecutah
+Exec=/var/usr/sbin/org.webosinternals.xecutah

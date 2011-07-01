@@ -1,0 +1,14 @@
+{
+  "role": {
+     "exeName":"/var/usr/sbin/org.webosinternals.xecutah",
+     "type": "regular",
+     "allowedNames": ["org.webosinternals.xecutah"]
+  },
+  "permissions": [
+    {
+      "service":"org.webosinternals.xecutah",
+      "inbound":["*"],
+      "outbound":["*"]
+    }
+  ]
+}

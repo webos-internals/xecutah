@@ -1,0 +1,209 @@
+/*
+ * Global Styles
+ */
+.scene-fade-top
+{
+	position: fixed; 
+	top: 0; 
+	z-index: 11000;
+	height: 30px; 
+	width: 100%;
+	background: url(../images/palm-default/scrollFade-top.png) top center repeat-x;
+	-webkit-palm-mouse-target: ignore;
+}
+.scene-fade-bottom
+{
+	position: fixed; 
+	bottom: 0; 
+	z-index: 11000;
+	height: 30px; 
+	width: 100%;
+	background: url(../images/palm-default/scrollFade-bottom.png) bottom center repeat-x;
+	-webkit-palm-mouse-target: ignore;
+}
+body.palm-dark .scene-fade-top
+{
+	background: url(../images/palm-dark/scrollFade-top.png) top center repeat-x;
+}
+body.palm-dark .scene-fade-bottom
+{
+	background: url(../images/palm-dark/scrollFade-bottom.png) bottom center repeat-x;
+}
+.palm-row-wrapper .pkgCount
+{
+	float: right;
+    line-height: 19px;
+    height: 30px;
+    min-width: 30px;
+	vertical-align: middle;
+    -webkit-border-image: url(../images/palm-default/pkgCount.png) 5 10 5 10 stretch stretch;
+    -webkit-box-sizing: border-box;
+    border-width: 5px 10px 5px 10px;
+	margin-top: 12px;
+	margin-right: 15px;
+}
+body.palm-dark .palm-row-wrapper .pkgCount
+{
+    -webkit-border-image: url(../images/palm-dark/pkgCount.png) 5 10 5 10 stretch stretch;
+}
+.palm-row-wrapper .pkgCount .count
+{
+	color: #e4e4e2;
+}
+body.palm-dark .palm-row-wrapper .pkgCount .count
+{
+	color: #393e43;
+}
+
+
+/*
+ * Startup Scene Styles
+ */
+.startup #data .palm-divider.labeled .label
+{
+	text-transform: lowercase;
+}
+.startup #data
+{
+	font-size: 18px;
+}
+.startup #data .text
+{
+	padding-top: 4px;
+	padding-left: 17px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+.startup #data ul
+{
+	margin: 0px;
+	padding-left: 37px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+
+
+/*
+ * Main Scene Styles
+ */
+.main .palm-page-header-wrapper .icon
+{
+	width: 76px;
+	height: 75px;
+	background: url(../icon.png) center center no-repeat !important;
+}
+.main .palm-page-header-wrapper .title
+{
+	padding-left: 80px;
+}
+.main .palm-page-header-wrapper .title.main
+{
+	font-size: 30px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+.main .palm-page-header-wrapper .title .version
+{
+	font-size: 12px;
+	color: #888;
+	text-transform: lowercase;
+}
+.main .palm-page-header-wrapper .title.sub
+{
+	font-size: 14px;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+.main .palm-row-wrapper
+{
+	height: 60px;
+}
+.main .palm-row-wrapper .title
+{
+	padding-top: 15px;
+}
+.main .palm-row-wrapper.disabled .title
+{
+	color: #999;
+}
+.main .palm-row-wrapper .pkgCount
+{
+	display: none;
+}
+.main .palm-row-wrapper.showCount .pkgCount
+{
+	display: inline;
+	margin-top: 14px;
+}
+
+
+
+/*
+ * Preference Scene Styles
+ */
+.prefs .palm-row-wrapper .label.left
+{
+	padding-left: 6px;
+	-webkit-palm-mouse-target: ignore;
+}
+.prefs .palm-list-selector .label
+{
+	float: left;
+}
+.prefs .palm-list-selector .title
+{
+	text-align: right;
+}
+.prefs .palm-group.disabled
+{
+	opacity: 0.35;
+}
+
+/*
+ * Help Scene Styles
+ */
+.help .list_scene
+{
+	position:relative;
+	left:48px;
+	top:10px;
+	width:32px; 
+	height:32px;
+	vertical-align:bottom;
+	padding: 0px 0px 0px 5px;
+	float:left;
+}
+.help .img_web
+{
+	position:relative;
+	left:8px;
+	top:10px;
+	width:32px; 
+	height:32px;
+	background: url(../images/help/application-web.png) no-repeat  bottom;
+	padding: 0px 0px 0px 5px;
+	float:left;
+}
+.help .img_email
+{
+	position:relative;
+	left:8px;
+	top:10px;
+	width:32px; 
+	height:32px;
+	background: url(../images/help/application-email.png) no-repeat bottom;
+	vertical-align:bottom;
+	padding: 0px 0px 0px 5px;
+	float:left;
+}
+.help .img_changelog
+{
+	position:relative;
+	left:8px;
+	top:10px;
+	width:32px; 
+	height:32px;
+	background: url(../images/help/scene-changelog.png) no-repeat  bottom;
+	padding: 0px 0px 0px 5px;
+	float:left;
+}

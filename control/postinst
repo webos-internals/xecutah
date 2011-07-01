@@ -1,0 +1,50 @@
+#!/bin/sh                                                                                       
+
+APPID=org.webosinternals.xecutah
+
+APPS=/media/cryptofs/apps
+
+[ -d $APPS ] || { echo "Requires webOS 1.3.5 or later" ; exit 1 ; }
+
+APPDIR=${APPS}/usr/palm/applications/${APPID}
+CSRVDIR=${APPS}/usr/palm/applications/${APPID}/c-service
+
+# Remove the C service executable
+rm -f /var/usr/sbin/${APPID}
+
+# Remove the dbus service
+rm -f /var/palm/ls2/services/prv/${APPID}.service /var/palm/ls2/services/pub/${APPID}.service
+
+# Remove the ls2 roles
+rm -f /var/palm/ls2/roles/prv/${APPID}.json /var/palm/ls2/roles/pub/${APPID}.json
+
+# Stop the service if running
+/sbin/stop ${APPID} || true
+/usr/bin/killall -9 ${APPID} || true
+
+# Remove the upstart script
+rm -f /var/palm/event.d/${APPID}
+
+# Install the xecutah executable
+mkdir -p /var/usr/sbin/
+install -m 755 ${CSRVDIR}/xecutah /var/usr/sbin/${APPID}
+
+# Install the dbus service
+mkdir -p /var/palm/ls2/services/prv /var/palm/ls2/services/pub
+cp ${CSRVDIR}/${APPID}.service /var/palm/ls2/services/prv/${APPID}.service
+cp ${CSRVDIR}/${APPID}.service /var/palm/ls2/services/pub/${APPID}.service
+
+# Install the ls2 roles
+mkdir -p /var/palm/ls2/roles/prv /var/palm/ls2/roles/pub
+cp ${CSRVDIR}/${APPID}.json /var/palm/ls2/roles/prv/${APPID}.json
+cp ${CSRVDIR}/${APPID}.json /var/palm/ls2/roles/pub/${APPID}.json
+/usr/bin/ls-control scan-services || true
+
+# Install the upstart script
+mkdir -p /var/palm/event.d
+cp ${CSRVDIR}/${APPID} /var/palm/event.d/${APPID}
+
+# Start the C service
+/sbin/start ${APPID}
+
+exit 0
