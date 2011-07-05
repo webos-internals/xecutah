@@ -61,11 +61,11 @@ MainAssistant.prototype.setup = function() {
 	
     this.mainModel.items.push({
 	    name:     $L('Start X Server'),
-		app:    'org.webosinternals.xlauncher/start',
+		app:    'org.webosinternals.xserver',
 		});
     this.mainModel.items.push({
 	    name:     $L('Start XTerm'),
-		app:    'org.webosinternals.xterm/start',
+		app:    'org.webosinternals.xterm',
 		});
     
     // setup widget
