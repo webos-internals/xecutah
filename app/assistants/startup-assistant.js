@@ -11,7 +11,7 @@ function StartupAssistant(changelog)
     this.newMessages =
 	[
 	 // Don't forget the comma on all but the last entry
-	 { version: '0.0.1', log: [ 'First Alpha Release' ] }
+	 { version: '0.6.5', log: [ 'First Alpha Release' ] }
 	 ];
 	
     // setup menu
