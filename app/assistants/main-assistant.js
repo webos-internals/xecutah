@@ -67,6 +67,10 @@ MainAssistant.prototype.setup = function() {
 	    name:     $L('Start XTerm'),
 		app:    'org.webosinternals.xterm',
 		});
+    this.mainModel.items.push({
+	    name:     $L('If you are running this on a TouchPad, and do not have the webOS 3.0 Developer Beta firmware installed, then you will require a bluetooth keyboard, as the on-screen keyboard will not appear.'),
+		app: false,
+		});
     
     // setup widget
     this.controller.setupWidget('mainList', { itemTemplate: "main/rowTemplate", swipeToDelete: false, reorderable: false }, this.mainModel);
@@ -76,7 +80,7 @@ MainAssistant.prototype.setup = function() {
 
 MainAssistant.prototype.listTap = function(event)
 {
-    if (event.item.scene === false || event.item.style == 'disabled') {
+    if (event.item.app === false || event.item.style == 'disabled') {
 	// no scene or its disabled, so we won't do anything
     }
     else {
