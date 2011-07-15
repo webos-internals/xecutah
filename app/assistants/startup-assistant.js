@@ -3,15 +3,15 @@ function StartupAssistant(changelog)
     this.justChangelog = changelog;
 
     // on first start, this message is displayed, along with the current version message from below
-    this.firstMessage = $L('Here are some tips for first-timers:<ul><li>There are no tips</li></ul>');
+    this.firstMessage = $L('Here are some tips for first-timers:<ul><li>Always start XServer first.</li><li>On phones, the orientation of the window is set to portrait mode to allow use of the physical keyboard for input.</li><li>On the TouchPad, the orientation of the window is set when you start XServer.</li><li>The XServer requires the <a href="https://developer.palm.com/content/resources/develop/webos_3_0_developer_beta.html">webOS 3.0 Developer Beta</a> firmware for correct operation on the TouchPad.</li></ul>');
 	
-    this.secondMessage = $L('We hope you enjoy being able to execute X Windows applications.<br>Please consider making a <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HLSTYY3RCKVY2\">donation</a> if you wish to show your appreciation.');
+    this.secondMessage = $L('We hope you enjoy being able to execute X Window System applications.<br>Please consider making a <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HLSTYY3RCKVY2\">donation</a> if you wish to show your appreciation.');
 	
     // on new version start
     this.newMessages =
 	[
 	 // Don't forget the comma on all but the last entry
-	 { version: '0.6.5', log: [ 'First Alpha Release' ] }
+	 { version: '0.6.6', log: [ 'First testing release' ] }
 	 ];
 	
     // setup menu

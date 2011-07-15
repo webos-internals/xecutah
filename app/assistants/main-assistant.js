@@ -60,7 +60,7 @@ MainAssistant.prototype.setup = function() {
     this.controller.setupWidget(Mojo.Menu.appMenu, { omitDefaultItems: true }, this.menuModel);
 	
     this.mainModel.items.push({
-	    name:     $L('Start X Server'),
+	    name:     $L('Start XServer'),
 		app:    'org.webosinternals.xserver',
 		});
     this.mainModel.items.push({
