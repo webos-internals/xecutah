@@ -97,6 +97,9 @@ MainAssistant.prototype.execStatus = function(payload)
 			  payload.stdErr.join("<br>"));
 	return;
     }
+    else {
+	this.errorMessage('<b>Xecutah Request Acknlowledged');
+    }
 }
 
 MainAssistant.prototype.getRandomSubTitle = function()
