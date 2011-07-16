@@ -367,7 +367,7 @@ bool execute_method(LSHandle* lshandle, LSMessage *message, void *ctx) {
     return true;
   }
 
-  sprintf(command, "/media/cryptofs/apps/usr/palm/applications/%s/xecutah.sh 2>&1", id->child->text);
+  sprintf(command, "/sbin/initctl start %s 2>&1", id->child->text);
 
   return simple_command(message, command);
 

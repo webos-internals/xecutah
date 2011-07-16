@@ -11,6 +11,7 @@ function StartupAssistant(changelog)
     this.newMessages =
 	[
 	 // Don't forget the comma on all but the last entry
+	 { version: '0.7.0', log: [ 'New upstart-based execution architecture to support legacy webOS versions' ] },
 	 { version: '0.6.7', log: [ 'Made the Developer Beta firmware requirement even more explicit' ] },
 	 { version: '0.6.6', log: [ 'First testing release' ] }
 	 ];

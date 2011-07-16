@@ -67,10 +67,11 @@ MainAssistant.prototype.setup = function() {
 	    name:     $L('Start XTerm'),
 		app:    'org.webosinternals.xterm',
 		});
-    this.mainModel.items.push({
-	    name:     $L('If you are running this on a TouchPad, and do not have the webOS 3.0 Developer Beta firmware installed, then you will require a bluetooth keyboard, as the on-screen keyboard will not appear.'),
-		app: false,
-		});
+    if (Mojo.Environment.DeviceInfo.modelNameAscii == 'TouchPad')
+	this.mainModel.items.push({
+		name:     $L('If you are running this on a TouchPad, and do not have the webOS 3.0 Developer Beta firmware installed, then you will require a bluetooth keyboard, as the on-screen keyboard will not appear.'),
+		    app: false,
+		    });
     
     // setup widget
     this.controller.setupWidget('mainList', { itemTemplate: "main/rowTemplate", swipeToDelete: false, reorderable: false }, this.mainModel);
@@ -91,7 +92,9 @@ MainAssistant.prototype.listTap = function(event)
 MainAssistant.prototype.execStatus = function(payload)
 {
     if (payload.returnValue == false) {
-	this.errorMessage('<b>Service Error (execute):</b><br>'+payload.errorText);
+	this.errorMessage('<b>Service Error (execute):</b><br>' +
+			  payload.errorText + "<br><br>" +
+			  payload.stdErr.join("<br>"));
 	return;
     }
 }
