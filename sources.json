@@ -1,5 +1,6 @@
 [
     {"source": "app/models/service.js"},
+    {"source": "app/models/applications.js"},
     {"source": "app/models/cookies.js"},
     {"source": "app/assistants/app-assistant.js"},
     {

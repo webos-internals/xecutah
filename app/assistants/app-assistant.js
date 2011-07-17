@@ -2,6 +2,8 @@
 var prefs = new preferenceCookie();
 var vers =  new versionCookie();
 
+var appDB = new Applications();
+
 // stage names
 var mainStageName = 'xecutah-main';
 
