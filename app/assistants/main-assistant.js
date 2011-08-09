@@ -70,8 +70,6 @@ MainAssistant.prototype.setup = function() {
     this.controller.setupWidget('mainList', { itemTemplate: "main/rowTemplate", swipeToDelete: false, reorderable: false }, this.mainModel);
     this.controller.listen(this.listElement, Mojo.Event.listTap, this.listTapHandler);
 
-    console.log("calling initApps");
-
     appDB.initApps(this.populateButtons.bind(this));
 };
 
@@ -79,10 +77,7 @@ MainAssistant.prototype.populateButtons = function(final)
 {
     this.mainModel.items = [];
 
-    console.log("in populatebuttons");
-
     this.supportedApps.forEach(function(appId) {
-	    console.log("checking "+appId);
 	    if (appDB.apps[appId]) {
 		this.mainModel.items.push({
 			name:     $L('Start')+' '+$L(appDB.apps[appId].title),
@@ -91,12 +86,6 @@ MainAssistant.prototype.populateButtons = function(final)
 	    }
 	}, this);
 
-    if (Mojo.Environment.DeviceInfo.modelNameAscii == 'TouchPad')
-	this.mainModel.items.push({
-		name:     $L('If you are running this on a TouchPad, and do not have the webOS 3.0 Developer Beta firmware installed, then you will require a bluetooth keyboard, as the on-screen keyboard will not appear.'),
-		    app: false,
-		    });
-    
     this.listElement.mojo.noticeUpdatedItems(0, this.mainModel.items);
 }
 
@@ -117,9 +106,6 @@ MainAssistant.prototype.execStatus = function(payload)
 			  payload.errorText + "<br><br>" +
 			  payload.stdErr.join("<br>"));
 	return;
-    }
-    else {
-	this.errorMessage('<b>Xecutah Request Acknlowledged');
     }
 }
 
