@@ -3,7 +3,7 @@ function StartupAssistant(changelog)
     this.justChangelog = changelog;
 
     // on first start, this message is displayed, along with the current version message from below
-    this.firstMessage = $L('Here are some tips for first-timers:<ul><li>Always start XServer first.</li><li>On phones, the orientation of the window is set to portrait mode to allow use of the physical keyboard for input.</li><li>On the TouchPad, the orientation of the window is set when you start XServer.</li><li>Hold down the keyboard button (bottom right), choose XS and the keyboard will fit in the screen and not cover up the input area.</li><li>The XServer requires webOS 3.0.2 or later for correct operation on the TouchPad.</li></ul>');
+    this.firstMessage = $L('Here are some tips for first-timers:<ul><li>Always start XServer first.</li><li>On phones, the orientation of the window is set to portrait mode to allow use of the physical keyboard for input.</li><li>On the TouchPad, the orientation of the window is set when you start XServer.</li><li>Use the Tweaks app to enable/disable or change the space reserved for the virtual keyboard.</li><li>The XServer requires webOS 3.0.2 or later for correct operation on the TouchPad.</li></ul>');
 	
     this.secondMessage = $L('We hope you enjoy being able to execute X Window System applications.<br>Please consider making a <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HLSTYY3RCKVY2\">donation</a> if you wish to show your appreciation.');
 	
@@ -11,7 +11,8 @@ function StartupAssistant(changelog)
     this.newMessages =
 	[
 	 // Don't forget the comma on all but the last entry
-	 { version: '0.8.2', log: [ 'Hold down the keyboard button (bottom right), choose XS and the keyboard will fit in the screen and not cover up the input area.' ] },
+	 { version: '0.8.3', log: [ 'Keyboard size and XTerm colours are now controlled using the Tweaks app' ] },
+	 { version: '0.8.2', log: [ 'Hold down the keyboard button (bottom right), choose XS and the keyboard will fit in the screen and not cover up the input area' ] },
 	 { version: '0.8.1', log: [ 'Removed the 3.0.2 warning text, and the request acknowledged button' ] },
 	 { version: '0.8.0', log: [ 'Added support for running a Ubuntu session (if installed)' ] },
 	 { version: '0.7.2', log: [ 'New upstart-based execution architecture to support legacy webOS versions' ] },
