@@ -11,6 +11,7 @@ function StartupAssistant(changelog)
     this.newMessages =
 	[
 	 // Don't forget the comma on all but the last entry
+	 { version: '0.8.4', log: [ 'Added support for running a Debian session (if installed)' ] },
 	 { version: '0.8.3', log: [ 'Keyboard size and XTerm colours are now controlled using the Tweaks app' ] },
 	 { version: '0.8.2', log: [ 'Hold down the keyboard button (bottom right), choose XS and the keyboard will fit in the screen and not cover up the input area' ] },
 	 { version: '0.8.1', log: [ 'Removed the 3.0.2 warning text, and the request acknowledged button' ] },
