@@ -90,7 +90,7 @@ MainAssistant.prototype.populateButtons = function(final)
     if (Mojo.Environment.DeviceInfo.modelNameAscii == 'TouchPad' ||
 	Mojo.Environment.DeviceInfo.modelNameAscii == 'Emulator') {
 	this.mainModel.items.push({
-		name:     $L('Tips: Use the Tweaks application to to enable/disable or change the space reserved for the virtual keyboard. Hold down the bottom right key on the virtual keyboard to change the keyboard size. Hold down the t key on the virtual keyboard and select the right-most option to simulate the Ctrl key. Simulate the Ctrl key and then select [ on the virtual keyboard to simulate the Esc key.'),
+		name:     $L('Tips: Use the Tweaks application to enable/disable or change the space reserved for the virtual keyboard. Hold down the bottom right key on the virtual keyboard to change the keyboard size. Hold down the t key on the virtual keyboard and select the right-most option to simulate the Ctrl key. Simulate the Ctrl key and then select the [ key on the virtual keyboard to simulate the Esc key.'),
 		    app: false,
 		    });
     }

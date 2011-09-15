@@ -3,7 +3,7 @@ function StartupAssistant(changelog)
     this.justChangelog = changelog;
 
     // on first start, this message is displayed, along with the current version message from below
-    this.firstMessage = $L('Here are some tips for first-timers:<ul><li>Always start XServer first.</li><li>On phones, the orientation of the window is set to portrait mode to allow use of the physical keyboard for input.</li><li>On the TouchPad, the orientation of the window is set when you start XServer.</li><li>Use the Tweaks app to enable/disable or change the space reserved for the virtual keyboard.</li><li>On the TouchPad virtual keyboard you can hold down the t key and select the right-most option to simulate the Ctrl key.</li><li>On the TouchPad virtual keyboard you can select the Ctrl key as described above and then select [ to simulate the Esc key.</li><li>On phones, place a finger on the gesture area to simulate the Ctrl key.</li><li>The XServer requires webOS 3.0.2 or later for correct operation on the TouchPad.</li></ul>');
+    this.firstMessage = $L('Here are some tips for first-timers:<ul><li>Always start XServer first.</li><li>On phones, the orientation of the window is set to portrait mode to allow use of the physical keyboard for input.</li><li>On the TouchPad, the orientation of the window is set when you start XServer.</li><li>The XServer requires webOS 3.0.2 or later for correct operation on the TouchPad.</li></ul>');
 	
     this.secondMessage = $L('We hope you enjoy being able to execute X Window System applications.<br>Please consider making a <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HLSTYY3RCKVY2\">donation</a> if you wish to show your appreciation.');
 	
