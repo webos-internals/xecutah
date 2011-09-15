@@ -87,6 +87,32 @@ MainAssistant.prototype.populateButtons = function(final)
 	    }
 	}, this);
 
+    if (Mojo.Environment.DeviceInfo.modelNameAscii == 'TouchPad' ||
+	Mojo.Environment.DeviceInfo.modelNameAscii == 'Emulator') {
+	this.mainModel.items.push({
+		name:     $L('Tip: Use the Tweaks application to to enable/disable or change the space reserved for the virtual keyboard. Hold down the bottom right key on the virtual keyboard to change the keyboard size.'),
+		    app: false,
+		    });
+	this.mainModel.items.push({
+		name:     $L('Tip: Hold down the t key on the virtual keyboard and select the right-most option to simulate the Ctrl key.'),
+		    app: false,
+		    });
+	this.mainModel.items.push({
+		name:     $L('Tip: Select the Ctrl key as described above and then select [ on the virtual keyboard to simulate the Esc key.'),
+		    app: false,
+		    });
+    }
+    else {
+	this.mainModel.items.push({
+		name:     $L('Tip: Place a finger on the gesture area to simulate the Ctrl key.'),
+		    app: false,
+		    });
+	this.mainModel.items.push({
+		name:     $L('Tip: Unfortunately, there is no known way to get an Esc character at this time.'),
+		    app: false,
+		    });
+    }
+
     this.listElement.mojo.noticeUpdatedItems(0, this.mainModel.items);
 }
 
