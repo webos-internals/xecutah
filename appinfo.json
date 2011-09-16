@@ -1,8 +1,8 @@
 {
 	"title": "Xecutah",
 	"id": "org.webosinternals.xecutah",
-	"version": "0.8.5",
-	"release_date":	"15-September-2011",
+	"version": "0.9.0",
+	"release_date":	"16-September-2011",
 	"vendor": "WebOS Internals",
 	"vendor_email":	"support@webos-internals.org",
 	"vendor_url": "http://www.webos-internals.org/wiki/Application:Xecutah",

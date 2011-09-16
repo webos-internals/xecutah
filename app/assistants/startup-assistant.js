@@ -11,6 +11,7 @@ function StartupAssistant(changelog)
     this.newMessages =
 	[
 	 // Don't forget the comma on all but the last entry
+	 { version: '0.9.0', log: [ 'First public feed release' ] },
 	 { version: '0.8.5', log: [ 'Added documentation of Ctrl and Esc on the TouchPad keyboard and Ctrl on phones' ] },
 	 { version: '0.8.4', log: [ 'Added support for running a Debian session (if installed)' ] },
 	 { version: '0.8.3', log: [ 'Keyboard size and XTerm colours are now controlled using the Tweaks app' ] },
