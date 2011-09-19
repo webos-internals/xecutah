@@ -28,9 +28,10 @@ function MainAssistant() {
 	 ]
     };
 
+    this.display = 0;
+
     this.supportedApps =
 	[
-	 'org.webosinternals.xserver',
 	 'org.webosinternals.xterm',
 	 'org.webosinternals.ubuntu-natty-chroot',
 	 'org.webosinternals.debian-squeeze-chroot'
@@ -110,7 +111,9 @@ MainAssistant.prototype.listTap = function(event)
 	// no scene or its disabled, so we won't do anything
     }
     else {
-	this.subscription = XecutahService.execute(this.execStatus.bindAsEventListener(this), event.item.app);
+	this.subscription = XecutahService.execute(this.execStatus.bindAsEventListener(this),
+						   ":"+this.display+".0", event.item.app);
+	this.display = this.display + 1;
     }
 };
 

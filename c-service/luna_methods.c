@@ -24,7 +24,7 @@
 #include "luna_service.h"
 #include "luna_methods.h"
 
-#define ALLOWED_CHARS "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-"
+#define ALLOWED_CHARS "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-:"
 
 #define API_VERSION "1"
 
@@ -357,8 +357,9 @@ bool execute_method(LSHandle* lshandle, LSMessage *message, void *ctx) {
 
   char command[MAXLINLEN];
 
-  // Extract the id argument from the message
   json_t *object = json_parse_document(LSMessageGetPayload(message));
+
+  // Extract the id argument from the message
   json_t *id = json_find_first_label(object, "id");               
   if (!id || (id->child->type != JSON_STRING) || (strspn(id->child->text, ALLOWED_CHARS) != strlen(id->child->text))) {
     if (!LSMessageReply(lshandle, message,
@@ -367,7 +368,14 @@ bool execute_method(LSHandle* lshandle, LSMessage *message, void *ctx) {
     return true;
   }
 
-  sprintf(command, "/sbin/initctl start %s 2>&1", id->child->text);
+  char *display = ":0.0";
+  // Extract the id argument from the message
+  json_t *d = json_find_first_label(object, "display");               
+  if (d && (d->child->type == JSON_STRING) && (strspn(d->child->text, ALLOWED_CHARS) == strlen(d->child->text))) {
+    display = d->child->text;
+  }
+
+  sprintf(command, "/sbin/initctl emit %s %s 2>&1", id->child->text, display);
 
   return simple_command(message, command);
 

@@ -12,10 +12,11 @@ XecutahService.version = function(callback) {
     return request;
 };
 
-XecutahService.execute = function(callback, id) {
+XecutahService.execute = function(callback, display, id) {
     var request = new Mojo.Service.Request(XecutahService.identifier, {
 	    method: 'execute',
 	    parameters: {
+		"display":display,
 		"id":id,
 	    },
 	    onSuccess: callback,
