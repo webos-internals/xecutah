@@ -34,7 +34,8 @@ function MainAssistant() {
 	[
 	 'org.webosinternals.xterm',
 	 'org.webosinternals.ubuntu-natty-chroot',
-	 'org.webosinternals.debian-squeeze-chroot'
+	 'org.webosinternals.debian-squeeze-chroot',
+	 'org.webosinternals.xapps-xchat-ubuntu-natty'
 	 ];
 }
 
