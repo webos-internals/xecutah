@@ -11,7 +11,7 @@ function StartupAssistant(changelog)
     this.newMessages =
 	[
 	 // Don't forget the comma on all but the last entry
-	 { version: '0.9.6', log: ['Added Support for ubuntu oneiric chroot' ] },
+	 { version: '0.9.6', log: [ 'Added Support for ubuntu oneiric chroot' ] },
 	 { version: '0.9.5', log: [ 'Added support for XApps:XChat-Ubuntu-Natty XChat X11 application' ] },
 	 { version: '0.9.3', log: [ 'Added support for starting multiple applications in separate cards',
 								'An XServer is now started automatically for each application instance' ] },
